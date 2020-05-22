@@ -47,8 +47,8 @@ case $opt in
 
         # Free Proxmox VE depot
         deb http://download.proxmox.com/debian/pve buster pve-no-subscription" > /etc/apt/sources.list
-        read -p "The list has been changed. Would you like to update and fully upgrade Proxmox VE ?" optt
-        case $optt in
+        read -p "The list has been changed. Would you like to update and fully upgrade Proxmox VE ?" optupdate
+        case $optupdate in
             y|Y|yes|Yes)
                 apt update && apt full-upgrade
                 ;;
