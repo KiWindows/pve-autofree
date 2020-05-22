@@ -25,7 +25,7 @@ echo "
 
 Script originaly made by KiWindows : https://kiwindows.fr , https://github.com/kiwindows
 
-pve-autofree version 1.2
+pve-autofree version 1.0.3
 
 The purpose of this script is to disable the enterprise-repos of Proxmox VE and add the
 free one. It also disable the subscription popup on the WebGUI.
@@ -47,7 +47,7 @@ case $opt in
         { echo '# Free Proxmox VE depot'; echo 'deb http://download.proxmox.com/debian/pve buster pve-no-subscription'; } >> sources.list
         read -p "The list has been changed. Would you like to update and fully upgrade Proxmox VE ?
 
-        " optupdate
+" optupdate
         case $optupdate in
             y|Y|yes|Yes)
                 apt update && apt full-upgrade -y
