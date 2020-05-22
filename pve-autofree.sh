@@ -44,9 +44,7 @@ case $opt in
         sed '1s/./#&/' old.list >pve-enterprise.list
         rm old.list
         cd /etc/apt/
-        { echo '
-
-'; echo '# Free Proxmox VE depot'; echo 'deb http://download.proxmox.com/debian/pve buster pve-no-subscription'; } >> sources.list
+        { echo '# Free Proxmox VE depot'; echo 'deb http://download.proxmox.com/debian/pve buster pve-no-subscription'; } >> sources.list
         read -p "The list has been changed. Would you like to update and fully upgrade Proxmox VE ?
 
         " optupdate
