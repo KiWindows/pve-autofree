@@ -54,7 +54,8 @@ case $opt in
                 ;;
         esac
         sed -i.bak "s/data.status !== 'Active'/false/g" /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js
-        echo "pveproxy.service restarting, you may refresh your tab in a few seconds..."
+        echo "pveproxy.service is restarting, you may refresh your tab in a few seconds..."
+        echo "If the popup still appears, cleaning your browser cache may help."
         systemctl restart pveproxy.service
         ;;
     n|N|no|No)
