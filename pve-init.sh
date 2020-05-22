@@ -53,7 +53,7 @@ case $opt in
                 apt update && apt full-upgrade
                 ;;
         esac
-        sed -i.bak "s/data.status !== 'Active'/false/g" /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js && systemctl restart pveproxy.service
+        sed -i.bak "s/data.status !== 'Active'/false/g" /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js
         systemctl restart pveproxy.service
         ;;
     n|N|no|No)
