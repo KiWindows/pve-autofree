@@ -39,10 +39,12 @@ and Proxmox VE will update and full upgrade
 read -p "Would you like to continue ? y/Y/yes/Yes n/N/no/No" opt
 case $opt in
     y|Y|yes|Yes)
+        cd /etc/apt/sources.list.d/
         mv pve-enterprise.list old.list
         sed '1s/./#&/' old.list >pve-enterprise.list
         rm old.list
         echo "
+        
         # Free Proxmox VE depot
         deb http://download.proxmox.com/debian/pve buster pve-no-subscription" > /etc/apt/sources.list
         read -p "The list has been changed. Would you like to update and fully upgrade Proxmox VE ?" opt
