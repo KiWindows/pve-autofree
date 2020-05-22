@@ -27,6 +27,8 @@ echo "
 
 Script originaly made by KiWindows : https://kiwindows.fr , https://github.com/kiwindows
 
+pve-init version 0.1
+
 The purpose of this script is to disable the enterprise-repos of Proxmox VE and add the
 free one. It also disable the subscription popup on the WebGUI.
 "
