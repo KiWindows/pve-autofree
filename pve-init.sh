@@ -31,6 +31,9 @@ pve-init version 0.1
 
 The purpose of this script is to disable the enterprise-repos of Proxmox VE and add the
 free one. It also disable the subscription popup on the WebGUI.
+
+Once the free repos have been installed, the pveproxy service will automatically be restarted
+and Proxmox VE will update and full upgrade.
 "
 
 read -p "Would you like to continue ? y/Y/yes/Yes n/N/no/No" opt
