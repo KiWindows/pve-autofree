@@ -45,12 +45,12 @@ case $opt in
         mv pve-enterprise.list old.list
         sed '1s/./#&/' old.list >pve-enterprise.list
         rm old.list
-        echo "
+        sed "
 
         # Free Proxmox VE depot
         deb http://download.proxmox.com/debian/pve buster pve-no-subscription" > /etc/apt/sources.list
         read -p "The list has been changed. Would you like to update and fully upgrade Proxmox VE ?
-        
+
         " optupdate
         case $optupdate in
             y|Y|yes|Yes)
