@@ -39,12 +39,8 @@ read -p "Would you like to continue ? y/Y/yes/Yes n/N/no/No
 " opt
 case $opt in
     y|Y|yes|Yes)
-        cd /etc/apt/sources.list.d/
-        mv pve-enterprise.list old.list
-        sed '1s/./#&/' old.list >pve-enterprise.list
-        rm old.list
-        cd /etc/apt/
-        { echo '# Free Proxmox VE depot'; echo 'deb http://download.proxmox.com/debian/pve buster pve-no-subscription'; } >> sources.list
+        mv /etc/apt/sources.list.d/pve-enterprise.list /etc/apt/sources.list.d/.disabled-pve-enterprise.list
+        { echo '# Free Proxmox VE depot'; echo 'deb http://download.proxmox.com/debian/pve buster pve-no-subscription'; } >> /etc/apt/sources.list.d/pve-free.list
         read -p "The list has been changed. Would you like to update and fully upgrade Proxmox VE ?
 
 " optupdate
