@@ -11,6 +11,4 @@
 
 ## 1.0.3 - 22/05/2020
 
-Fully fonctionnal. Works with sed by editing the concerned files
-
-*saucisse*
+*   Fully fonctionnal. Works with sed by editing the concerned files
