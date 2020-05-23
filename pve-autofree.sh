@@ -25,7 +25,7 @@ echo "
 
 Script originaly made by KiWindows : https://kiwindows.fr , https://github.com/kiwindows
 
-pve-autofree version 1.0.3
+pve-autofree version 1.1
 
 The purpose of this script is to disable the enterprise-repos of Proxmox VE and add the
 free one. It also disable the subscription popup on the WebGUI.
@@ -50,7 +50,7 @@ case $opt in
                 ;;
         esac
         # sed -i.bak "s/data.status !== 'Active'/false/g" /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js
-        patch -N /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js < https://gist.githubusercontent.com/KiWindows/0998c55724377719be5ec860a3bfe588/raw/903735f842fc9ca9df99d64dc15e11fc8345db21/proxmoxlib.js.patch
+        patch -N /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js < curl -s https://gist.githubusercontent.com/KiWindows/0998c55724377719be5ec860a3bfe588/raw/903735f842fc9ca9df99d64dc15e11fc8345db21/proxmoxlib.js.patch
         echo "pveproxy.service is restarting, remember to refresh your tab in a few seconds..."
         echo "If the popup still appears, cleaning your browser cache may help."
         systemctl restart pveproxy.service
