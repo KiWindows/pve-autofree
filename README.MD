@@ -1,4 +1,4 @@
-# PVE-Autofree 1.0.3
+# PVE-Autofree 1.1
 
 ## Description
 
@@ -14,4 +14,4 @@ Run this command under your root shell : `bash <(curl -s https://pve-autofree.ki
 Tested under Proxmox VE version 6.2-4 the 22/05/2020.
 
 This script is under the WTFPL. You can consult more informations about this license by viewing the
-wtfpl_license.txt file in this git, or at http://www.wtfpl.net.
+LICENSE.txt file in this git, or at http://www.wtfpl.net.
