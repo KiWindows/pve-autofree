@@ -34,13 +34,17 @@ Once the free repos have been installed, the pveproxy service will automatically
 and Proxmox VE will update and full upgrade
 "
 
+export aptrep="/etc/apt/sources.list.d/";
+export jsrep="/usr/share/javascript/proxmox-widget-toolkit/";
+
 read -p "Would you like to continue ? y/Y/yes/Yes n/N/no/No
 
 " opt
+
 case $opt in
     y|Y|yes|Yes)
-        mv /etc/apt/sources.list.d/pve-enterprise.list /etc/apt/sources.list.d/.disabled-pve-enterprise.list
-        { echo '# Free Proxmox VE depot'; echo 'deb http://download.proxmox.com/debian/pve buster pve-no-subscription'; } >> /etc/apt/sources.list.d/pve-free.list
+        mv $aptrep/pve-enterprise.list $aptrep/.disabled-pve-enterprise.list
+        { echo '# Free Proxmox VE depot'; echo 'deb http://download.proxmox.com/debian/pve buster pve-no-subscription'; } >> $aptrep/pve-free.list
         read -p "The list have been changed. Would you like to update and fully upgrade Proxmox VE ?
 
 " optupdate
@@ -49,8 +53,8 @@ case $opt in
                 apt update && apt full-upgrade -y
                 ;;
         esac
-        wget -O /tmp/proxmoxlib.js.patch https://pastebin.com/raw/rd4nirns
-        patch -N /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js < /tmp/proxmoxlib.js.patch
+        wget -O $jsrep/proxmoxlib.js.patch https://pastebin.com/raw/rd4nirns
+        patch -N $jsrep/proxmoxlib.js < $jsrep/proxmoxlib.js.patch
         echo "pveproxy.service is restarting, remember to refresh your tab in a few seconds, because the webgui will freeze..."
         echo "If the popup still appears, cleaning your browser cache may help."
         systemctl restart pveproxy.service

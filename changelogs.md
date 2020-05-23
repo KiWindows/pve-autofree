@@ -1,5 +1,10 @@
 # Changelogs
 
+## 1.1.1 - 24/05/2020
+
+*   Added variables for a more readable code
+*   Patch file is now downloaded in the same repertory as the proxmoxlib.js file
+
 ## 1.1 - 23/05/2020
 
 *   Add free depot : now creates a files in /etc/apt.sources.list.d/ named "pve-free.list" instead of editing "/etc/apt.sources.list".
