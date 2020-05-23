@@ -41,7 +41,7 @@ case $opt in
     y|Y|yes|Yes)
         mv /etc/apt/sources.list.d/pve-enterprise.list /etc/apt/sources.list.d/.disabled-pve-enterprise.list
         { echo '# Free Proxmox VE depot'; echo 'deb http://download.proxmox.com/debian/pve buster pve-no-subscription'; } >> /etc/apt/sources.list.d/pve-free.list
-        read -p "The list has been changed. Would you like to update and fully upgrade Proxmox VE ?
+        read -p "The list have been changed. Would you like to update and fully upgrade Proxmox VE ?
 
 " optupdate
         case $optupdate in
@@ -50,7 +50,7 @@ case $opt in
                 ;;
         esac
         sed -i.bak "s/data.status !== 'Active'/false/g" /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js
-        echo "pveproxy.service is restarting, you may refresh your tab in a few seconds..."
+        echo "pveproxy.service is restarting, remember to refresh your tab in a few seconds..."
         echo "If the popup still appears, cleaning your browser cache may help."
         systemctl restart pveproxy.service
         ;;
