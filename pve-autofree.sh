@@ -53,8 +53,7 @@ case $opt in
                 apt update && apt full-upgrade -y
                 ;;
         esac
-        wget -O $jsrep/proxmoxlib.js.patch https://pastebin.com/raw/rd4nirns
-        patch -N $jsrep/proxmoxlib.js < $jsrep/proxmoxlib.js.patch
+        sed -i.bak "s/data.status !== 'Active'/false/g" /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js && systemctl restart pveproxy.service
         echo "pveproxy.service is restarting, remember to refresh your tab in a few seconds, because the webgui will freeze..."
         echo "If the popup still appears, cleaning your browser cache may help."
         systemctl restart pveproxy.service
