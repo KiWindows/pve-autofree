@@ -1,5 +1,9 @@
 # Changelogs
 
+## 1.2 - 31/05/2020
+
+*   Back to the sed method for removing the subscription message
+
 ## 1.1.1 - 24/05/2020
 
 *   Added variables for a more readable code
