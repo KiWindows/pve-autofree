@@ -35,7 +35,6 @@ and Proxmox VE will update and full upgrade
 "
 
 export aptrep="/etc/apt/sources.list.d";
-export jsrep="/usr/share/javascript/proxmox-widget-toolkit";
 
 read -p "Would you like to continue ? y/Y/yes/Yes n/N/no/No
 
