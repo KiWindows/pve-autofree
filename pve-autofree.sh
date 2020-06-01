@@ -1,37 +1,39 @@
 #!/bin/bash
-echo "
-                                            /&@@@  .@@&                         
-                                     @@@@@@@@@@@   @@@@@@@@@@@@#                
-                                 @@@@@@@@@@@@@@   @@@@@@@@@@@@@@@@@@*           
-                              @@@@@@@@@@@@@@@@   @@@@@@@@@@@@@@@@@@@@@@         
-              .@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   @@@@@@@@@@@@@@@@@@@@@@@@       
-             @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   @@@@@@@@@@@@@@@@@@@@@@@@@@(     
-            @@@@@(                 @@@@@@@@@   @@@@@@@@@@@@@@@@@@@@@@@@@@@@     
-           .        *@@@@@@@@,          @@@,  (@@@@@@@@@@@@@@@@@@@@@@@@@@@@&    
-           #@@@@@@@@@@@@@@@@@@@@@@@@@         @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@    
-           @@@@@@@@@@@@@@@ @@@@@@@@@@@@@@      @@@@@@@@@@@@@@@@@@@@@@@@@@@@@    
-           @@@@@@@@@@,      #@@@@@@@@@@@@@   @     &@@@@@@@@@@@@@@@@@@@@@@@     
-         @@@@                 .@@@@@@@@@@   @@@@@@&        .@@@@@@@@/.          
-        @@@                      @@@@@@@   ,@@@@@@@@@@@@@            %@@@@      
-      /@@,                           @@*   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@       
-     *@@                                  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@         
-     @@                                         @@@@@@@@@@@@@@@@@@@@            
-    @@.                                        (@@@      @@@@@@@@               
-    @@                                         @@@/       @@@@@                 
-    @                                         (@@@        @@@                   
-                                        /@@@@@@@@@@      %@@@                   
-                                            @     ,@@@@@@@@@@                   
-                                                      @@@                       
+echo -e "
+    \e[91m                                            /&@@@ \e[92m .@@&                         \e[0m
+    \e[91m                                     @@@@@@@@@@@ \e[92m  @@@@@@@@@@@@#                \e[0m
+    \e[91m                                 @@@@@@@@@@@@@@ \e[92m  @@@@@@@@@@@@@@@@@@*           \e[0m
+    \e[91m                              @@@@@@@@@@@@@@@@ \e[92m  @@@@@@@@@@@@@@@@@@@@@@         \e[0m
+    \e[91m              .@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ \e[92m  @@@@@@@@@@@@@@@@@@@@@@@@       \e[0m
+    \e[91m             @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ \e[92m  @@@@@@@@@@@@@@@@@@@@@@@@@@(     \e[0m
+    \e[91m            @@@@@(                 @@@@@@@@@ \e[92m  @@@@@@@@@@@@@@@@@@@@@@@@@@@@     \e[0m
+    \e[94m           .        *@@@@@@@@,    \e[91m      @@@, \e[92m (@@@@@@@@@@@@@@@@@@@@@@@@@@@@&    \e[0m
+    \e[94m           #@@@@@@@@@@@@@@@@@@@@@@@@@      \e[92m   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@    \e[0m
+    \e[94m           @@@@@@@@@@@@@@@ @@@@@@@@@@@@@@   \e[92m   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@    \e[0m
+    \e[94m           @@@@@@@@@@,      #@@@@@@@@@@@@@ \e[93m  @   \e[92m  &@@@@@@@@@@@@@@@@@@@@@@@     \e[0m
+    \e[94m         @@@@                 .@@@@@@@@@@  \e[93m @@@@@@&   \e[92m     .@@@@@@@@/.          \e[0m
+    \e[94m        @@@                      @@@@@@@  \e[93m ,@@@@@@@@@@@@@    \e[93m        %@@@@      \e[0m
+    \e[94m      /@@,                           @@*  \e[93m @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@       \e[0m
+    \e[94m     *@@                                 \e[93m @@@@@@@@@@@@@@@@@@@@@@@@@@@@@         \e[0m
+    \e[94m     @@                                     \e[93m    @@@@@@@@@@@@@@@@@@@@            \e[0m
+    \e[94m    @@.                                   \e[93m     (@@@      @@@@@@@@               \e[0m
+    \e[94m    @@                                  \e[93m       @@@/       @@@@@                 \e[0m
+    \e[94m    @                                 \e[93m        (@@@        @@@                   \e[0m
+                                     \e[93m       /@@@@@@@@@@      %@@@                   \e[0m
+                                  \e[93m              @     ,@@@@@@@@@@                   \e[0m
+                                    \e[93m                      @@@                       \e[0m
 
-Script originaly made by KiWindows : https://kiwindows.fr , https://github.com/kiwindows
+    Script originaly made by KiWindows : https://kiwindows.fr , https://github.com/kiwindows
+                    Colorful logo by Dok-T : https://github.com/Dok-T/
 
-pve-autofree version 1.2
+                                        
+                                        pve-autofree version 1.2.1
 
-The purpose of this script is to disable the enterprise-repos of Proxmox VE and add the
-free one. It also disable the subscription popup on the WebGUI.
+    The purpose of this script is to disable the enterprise-repos of Proxmox VE and add the
+                free one. It also disable the subscription popup on the WebGUI.
 
-Once the free repos have been installed, the pveproxy service will automatically be restarted
-and Proxmox VE will update and full upgrade
+    Once the free repos have been installed, the pveproxy service will automatically be restarted
+                            and Proxmox VE will update and full upgrade
 "
 
 export aptrep="/etc/apt/sources.list.d";
