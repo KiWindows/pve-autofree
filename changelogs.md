@@ -1,5 +1,5 @@
 # Changelogs
-
+saucisson
 ## 1.2.1 - 01/06/2020
 
 *   New logo in RGB color, thanks to https://github.com/Dok-T/ :)
