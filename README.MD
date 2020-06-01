@@ -1,4 +1,4 @@
-# PVE-Autofree 1.2
+# PVE-Autofree 1.2.1
 
 ## Description
 

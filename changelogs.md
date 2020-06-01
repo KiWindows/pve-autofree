@@ -1,5 +1,9 @@
 # Changelogs
 
+## 1.2.1 - 01/06/2020
+
+*   New logo in RGB color, thanks to https://github.com/Dok-T/ :)
+
 ## 1.2 - 31/05/2020
 
 *   Back to the sed method for removing the subscription message
