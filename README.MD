@@ -8,6 +8,7 @@ free one. It also disable the subscription popup on the web interface.
 ## How to use it
 
 Run this command under your root shell : `bash <(curl -s https://pve-autofree.kiwindows.fr)`
+NOTE : As I powered off my server, run this instead : `bash <(curl -s https://raw.githubusercontent.com/KiWindows/pve-autofree/master/pve-autofree.sh)` 
 
 ## License and compatibility
 
