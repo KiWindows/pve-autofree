@@ -44,7 +44,7 @@ read -p "Would you like to continue ? y/Y/yes/Yes n/N/no/No
 
 case $opt in
     y|Y|yes|Yes)
-        mv $aptrep/pve-enterprise.list $aptrep/.disabled-pve-enterprise.list
+        mv $aptrep/pve-enterprise.list $aptrep/pve-enterprise.list.disabled
         { echo '# Free Proxmox VE depot'; echo 'deb http://download.proxmox.com/debian/pve buster pve-no-subscription'; } >> $aptrep/pve-free.list
         read -p "The list have been changed. Would you like to update and fully upgrade Proxmox VE ?
 
