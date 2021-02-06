@@ -56,7 +56,7 @@ case $opt in
         esac
         sed -i.bak "s/data.status !== 'Active'/false/g" /usr/share/pve-manager/js/pvemanagerlib.js
         echo "pveproxy.service is restarting, remember to refresh your tab in a few seconds, because the webgui will freeze..."
-        echo "If the popup still appears, cleaning your browser cache may help."
+        echo "If the popup still appears, cleaning your browser cache may help, press simultaneously ctrl F5 keys to do so."
         systemctl restart pveproxy.service
         ;;
     n|N|no|No)
