@@ -27,7 +27,7 @@ echo -e "
                     Colorful logo by Dok-T : https://github.com/Dok-T/
 
                                         
-                                        pve-autofree version 1.2.1
+                                        pve-autofree version 1.2.2
 
     The purpose of this script is to disable the enterprise-repos of Proxmox VE and add the
                 free one. It also disable the subscription popup on the WebGUI.
@@ -54,7 +54,7 @@ case $opt in
                 apt update && apt full-upgrade -y
                 ;;
         esac
-        sed -i.bak "s/data.status !== 'Active'/false/g" /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js
+        sed -i.bak "s/data.status !== 'Active'/false/g" /usr/share/pve-manager/js/pvemanagerlib.js
         echo "pveproxy.service is restarting, remember to refresh your tab in a few seconds, because the webgui will freeze..."
         echo "If the popup still appears, cleaning your browser cache may help."
         systemctl restart pveproxy.service
