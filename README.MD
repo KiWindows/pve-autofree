@@ -13,5 +13,5 @@ Run this command under your root shell : `bash <(curl -s https://pve-autofree.ki
 
 Tested under Proxmox VE version 6.3-2 on 30/04/2021.
 
-This script is under the WTFPL. You can consult more informations about this license by viewing the
+This script is under the WTFPL licence. You can consult more informations about this license by viewing the
 LICENSE.txt file in this git, or at http://www.wtfpl.net.
