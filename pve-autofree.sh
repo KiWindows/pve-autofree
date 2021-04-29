@@ -54,7 +54,7 @@ case $opt in
                 apt update && apt full-upgrade -y
                 ;;
         esac
-        sed -i.bak "s/data.status !== 'Active'/false/g" /usr/share/pve-manager/js/pvemanagerlib.js
+        sed -i.bak "s/(Ext.Msg.show\(\{\s+title: gettext\('No valid sub)/void\(\{ \/\/\1/g" /usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js
         echo "pveproxy.service is restarting, remember to refresh your tab in a few seconds, because the webgui will freeze..."
         echo "If the popup still appears, cleaning your browser cache may help, press simultaneously ctrl F5 keys to do so."
         systemctl restart pveproxy.service
